@@ -29,3 +29,15 @@ my $resp = $rcon->query( 'status' );
 ```
 
 `$resp` will contain the full response from the server; multiple-packet responses are automatically stitched together for you. 
+
+## Example usage
+
+```
+use Net::SourceRCON; # should probably put this under a 'Net' folder.
+
+my $rcon = Net::SourceRCON->new( address => '1.2.3.4', port => 13371, password => 'rosebud' );
+$rcon->login;
+
+my $resp = $rcon->query( 'cvarlist' );
+say $resp;
+```
