@@ -16,7 +16,7 @@ Additional constructor options:
 * `port` - defaults to 27015.
 * `autoretry` - currently unimplemented.
 * `timeout` - socket timeout in seconds. Default is no timeout.
-* `strictly_compliant` - Per [Valve](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol#Requests_and_Responses), an RCON server will respond to a `SERVERDATA_AUTH` request with two packets, an empty `SERVERDATA_RESPONSE_VALUE`, followed by the `SERVERDATA_AUTH_RESPONSE` packet. Some games may not implement the (useless) `RESPONSE_VALUE` packet and just send the auth response instead. By default, `Net::SourceRCON` will carp at you if it doesn't get the `SERVERDATA_RESPONSE_VALUE` packet first; set this to 0 to disable this behavior if you're working with non-Valve games that exhibit this behavior.
+* `strictly_compliant` - Per [Valve](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol#Requests_and_Responses), an RCON server will respond to a `SERVERDATA_AUTH` request with two packets, an empty `SERVERDATA_RESPONSE_VALUE`, followed by the `SERVERDATA_AUTH_RESPONSE` packet. Some games may not implement the (useless) `RESPONSE_VALUE` packet and just send the auth response instead. By default, `Net::SourceRCON` will carp at you if it doesn't get the `SERVERDATA_RESPONSE_VALUE` packet first; set this to 0 to disable this behavior if you're working with non-Valve games that work like this.
 
 ## Authentication
 
